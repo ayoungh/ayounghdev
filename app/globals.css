@@ -1,6 +1,24 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes neon-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px #ff00003a, 0 0 10px #ff00003a, 0 0 15px #ff00003a,
+      0 0 20px #ff00003a;
+  }
+
+  50% {
+    box-shadow: 0 0 10px #ff00003a, 0 0 20px #ff00003a, 0 0 30px #ff0000,
+      0 0 40px #ff00003a;
+  }
+}
+
+.neon-border {
+  border: 2px solid #ff00003e;
+  animation: neon-glow 2s ease-in-out infinite;
+}
 
 @layer base {
   :root {
@@ -23,7 +41,12 @@
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 72.2% 50.6%;
-    --radius: 0rem;
+    --radius: 1rem;
+    --chart-1: ;
+    --chart-2: ;
+    --chart-3: ;
+    --chart-4: ;
+    --chart-5: ;
   }
 
   .dark {
@@ -46,14 +69,19 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 72.2% 50.6%;
+    --chart-1: ;
+    --chart-2: ;
+    --chart-3: ;
+    --chart-4: ;
+    --chart-5: ;
   }
 }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+@layer base {
+  * {
+    @apply border-border;
   }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Code, Cpu, Network } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,7 +9,43 @@ export default function Home() {
       {/* <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> */}
       <Nav />
 
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+      <div
+        className={`w-full max-w-2xl mx-auto dark:bg-gray-800/20 bg-white bg-opacity-80 rounded-sm p-8 shadow-lg backdrop-blur-md relative z-10 neon-border mb-20`}
+      >
+        <header className="mb-8 border-b border-red-500 pb-4">
+          <h1
+            className="text-4xl font-bold mb-2 text-red-500 glitch"
+            style={{ textShadow: "2px 2px 4px rgba(255,0,0,0.5)" }}
+          >
+            Anthony Young
+          </h1>
+          <p className={`text-xl dark:text-gray-300 text-gray-600`}>
+            Software Engineer
+          </p>
+        </header>
+
+        <main>
+          <p className={`mb-6 dark:'text-gray-300 text-gray-600`}>
+            Welcome to my digital space. I'm a software engineer with a passion
+            for web technologies and a love for all things code. I'm currently working as a Engineering Manager.
+          </p>
+        </main>
+
+        <footer
+          className={`flex items-center justify-between pt-4 border-t ${"dark:border-gray-700 border-gray-300"}`}
+        >
+          <p className={"dark:text-gray-400 text-gray-600"}>
+
+          </p>
+          <div className="flex space-x-2">
+            <Code className="text-red-500 animate-pulse" />
+            <Cpu className="text-red-500 animate-pulse" />
+            <Network className="text-red-500 animate-pulse" />
+          </div>
+        </footer>
+      </div>
+
+      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
           <code className="font-mono font-bold">app/page.tsx</code>
@@ -33,9 +70,9 @@ export default function Home() {
 
           <ThemeToggle />
         </div>
-      </div>
+      </div> */}
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+      {/* <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           src="/next.svg"
@@ -44,9 +81,9 @@ export default function Home() {
           height={37}
           priority
         />
-      </div>
+      </div> */}
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+      {/* <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
@@ -114,7 +151,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }

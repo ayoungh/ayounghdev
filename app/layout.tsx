@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import FooterSimple from "@/components/FooterSimple";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background text-foreground font-sans antialiased bg-theme-light dark:bg-theme-dark",
           fontSans.variable
         )}
       >
@@ -35,6 +36,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <FooterSimple />
         </ThemeProvider>
         <Toaster />
       </body>
